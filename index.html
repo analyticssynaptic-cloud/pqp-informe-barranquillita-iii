@@ -193,7 +193,7 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--p-s
 .car-counter{position:absolute;bottom:12px;right:14px;background:rgba(11,37,69,.65);color:#fff;font-size:.7rem;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px}
 .car-caption{text-align:center;padding:14px 10px 2px}
 #carPdv{font-size:1rem;font-weight:800;color:var(--p-navy)}#carMeta{font-size:.78rem;color:var(--p-gray);margin-top:3px}
-@media(max-width:640px){.car-nav{width:36px;height:36px}.car-side{display:none}.car-stage{max-width:88vw}}</style></head><body>
+@media(max-width:640px){.car-nav{width:36px;height:36px}.car-side{display:none}.car-stage{max-width:88vw}}#cmpPdv{font-size:1rem;font-weight:800;color:var(--p-navy)}#cmpMeta{font-size:.78rem;color:var(--p-gray);margin-top:3px}.vid-box{max-width:780px;margin:0 auto 40px}.vid-frame{position:relative;width:100%;aspect-ratio:16/9;background:var(--p-navy);border-radius:4px;overflow:hidden;box-shadow:0 15px 35px rgba(11,37,69,.22)}.vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.vid-cap{text-align:center;padding:14px 10px 0;font-size:.82rem;color:var(--p-gray)}.vid-cap a{color:var(--p-blue);font-weight:700;text-decoration:none}</style></head><body>
 <header class="hero">
   <div class="hero-topbar">
     <div class="brand-mark"><div class="mk">P</div><span>PQP · Intelligence</span></div>
@@ -293,7 +293,25 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--p-s
  <table class="table-data"><tr><th>Premio</th><th>Jornada</th><th class="num">Uds.</th></tr><tr><td>Kit 1 · Desengrasante + lavalozas</td><td>2 al 9 oct</td><td class="num">14</td></tr><tr><td>Kit 2 · Detergente en polvo 120 g + líquido 110 g + suavizante 120 g</td><td>5 oct</td><td class="num">6</td></tr><tr><td>Kit 2 · Detergente en polvo 120 g + líquido 110 g + suavizante 120 g</td><td>9 oct</td><td class="num">2</td></tr><tr><td>Kit 2 · Detergente en polvo 120 g + líquido 110 g + suavizante 120 g</td><td>16 oct</td><td class="num">3</td></tr><tr><td>Kit 2 · Detergente en polvo 120 g + líquido 110 g + suavizante 120 g</td><td>17 oct</td><td class="num">2</td></tr><tr><td>Kit 2 · Detergente en polvo 120 g + líquido 110 g + suavizante 120 g</td><td>23 oct</td><td class="num">1</td></tr><tr><td>Recipiente plástico</td><td>16 oct</td><td class="num">2</td></tr><tr><td>Recipiente plástico</td><td>19 oct</td><td class="num">9</td></tr><tr><td>Recipiente plástico</td><td>23 oct</td><td class="num">1</td></tr><tr><td>Total</td><td></td><td class="num">40</td></tr></table><p class="tbl-sub" style="margin-top:14px;">El 19 de octubre incluye 7 recipientes adicionales a los 2 registrados en la herramienta.</p></div>
 </div>
 
-<div class="section-hero"><div class="num">05</div><h2 class="section-title">Evidencia <em>fotográfica</em></h2></div>
+<div class="section-hero"><div class="num">05</div><h2 class="section-title">Actividades <em>de la competencia</em></h2></div>
+<p class="section-sub">Registro fotográfico y en video de lo que realiza la competencia en el punto de venta. Las fotos van rotando solas, o dale clic para pasar a la siguiente.</p>
+<div class="carousel">
+  <div class="car-row">
+    <div class="car-side left" id="cmpSideLeft"><img id="cmpImgPrev" src="" alt="" referrerpolicy="no-referrer"></div>
+    <div class="car-stage" id="cmpStage">
+      <button class="car-nav prev" id="cmpPrev" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+      <img id="cmpImg" src="" alt="" referrerpolicy="no-referrer">
+      <button class="car-nav next" id="cmpNext" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+      <div class="car-counter" id="cmpCounter"></div>
+    </div>
+    <div class="car-side right" id="cmpSideRight"><img id="cmpImgNext" src="" alt="" referrerpolicy="no-referrer"></div>
+  </div>
+  <div class="car-caption"><div id="cmpPdv"></div><div id="cmpMeta"></div></div>
+</div>
+<div class="vid-box"><div class="vid-frame"><iframe src="https://drive.google.com/file/d/1XP5eVgJxhgiAMhvY_dLLydx09DO5bsw/preview" allow="autoplay; fullscreen" allowfullscreen loading="lazy" title="Video de la actividad de la competencia"></iframe></div>
+<div class="vid-cap">Video de la actividad de la competencia · <a href="https://drive.google.com/file/d/1XP5eVgJxhgiAMhvY_dLLydx09DO5bsw/view" target="_blank" rel="noopener">Abrir en Drive</a></div></div>
+
+<div class="section-hero"><div class="num">06</div><h2 class="section-title">Evidencia <em>fotográfica</em></h2></div>
 <p class="section-sub">Registro fotográfico de la actividad. Va rotando solo, o dale clic para pasar a la siguiente.</p>
 <div class="carousel">
   <div class="car-row">
@@ -364,5 +382,23 @@ document.getElementById('carStage').addEventListener('click',function(e){if(e.ta
 document.getElementById('carSideLeft').addEventListener('click',function(){carAnterior();reiniciarAutoplay();});
 document.getElementById('carSideRight').addEventListener('click',function(){carSiguiente();reiniciarAutoplay();});
 mostrarCarrusel();reiniciarAutoplay();
+const GALERIA2 = [{"pdv": "Actividad de la competencia", "meta": "Barranquilla · registro fotográfico", "url": "https://lh3.googleusercontent.com/d/1fr0eCK--k_27JeFCj0DobgpCJcuSdEjA=w1600"}, {"pdv": "Actividad de la competencia", "meta": "Barranquilla · registro fotográfico", "url": "https://lh3.googleusercontent.com/d/15Pw5hgptDXWfX_l1_oTO4KdNS8xOaBfy=w1600"}, {"pdv": "Actividad de la competencia", "meta": "Barranquilla · registro fotográfico", "url": "https://lh3.googleusercontent.com/d/1-HFgIVFUOaXCqne8Q0yyIxwaHHlNIyCv=w1600"}, {"pdv": "Actividad de la competencia", "meta": "Barranquilla · registro fotográfico", "url": "https://lh3.googleusercontent.com/d/1ENT2-fQEesppj6_OEucsPCvPvbYW48Z0=w1600"}, {"pdv": "Actividad de la competencia", "meta": "Barranquilla · registro fotográfico", "url": "https://lh3.googleusercontent.com/d/1ShVcMUv0G0WxXlmkt4ewDYmI-nrPhEV2=w1600"}, {"pdv": "Actividad de la competencia", "meta": "Barranquilla · registro fotográfico", "url": "https://lh3.googleusercontent.com/d/130aqxXw_i36gVvUS0yKSuFLM-6-rIebm=w1600"}, {"pdv": "Actividad de la competencia", "meta": "Barranquilla · registro fotográfico", "url": "https://lh3.googleusercontent.com/d/1CFhEmxDFgI3Tn_QKVqvJUyhoYuMX4NKb=w1600"}, {"pdv": "Actividad de la competencia", "meta": "Barranquilla · registro fotográfico", "url": "https://lh3.googleusercontent.com/d/18v-IpaX7gqwMmulDA4cJyUtvYJbABdXg=w1600"}];
+let cmpIndex=0,cmpTimer=null;
+function cmpMostrarCarrusel(){const v=GALERIA2[cmpIndex];if(!v)return;
+ const prevV=GALERIA2[(cmpIndex-1+GALERIA2.length)%GALERIA2.length],nextV=GALERIA2[(cmpIndex+1)%GALERIA2.length];
+ const img=document.getElementById('cmpImg');img.style.opacity=0;
+ const pre=new Image();pre.referrerPolicy='no-referrer';pre.onload=function(){img.src=v.url;img.style.opacity=1;};pre.src=v.url;
+ document.getElementById('cmpImgPrev').src=prevV.url;document.getElementById('cmpImgNext').src=nextV.url;
+ document.getElementById('cmpPdv').textContent=v.pdv;document.getElementById('cmpMeta').textContent=v.meta;
+ document.getElementById('cmpCounter').textContent=(cmpIndex+1)+' / '+GALERIA2.length;}
+function cmpSiguiente(){cmpIndex=(cmpIndex+1)%GALERIA2.length;cmpMostrarCarrusel();}
+function cmpAnterior(){cmpIndex=(cmpIndex-1+GALERIA2.length)%GALERIA2.length;cmpMostrarCarrusel();}
+function cmpReiniciarAutoplay(){clearInterval(cmpTimer);cmpTimer=setInterval(cmpSiguiente,4000);}
+document.getElementById('cmpNext').addEventListener('click',function(e){e.stopPropagation();cmpSiguiente();cmpReiniciarAutoplay();});
+document.getElementById('cmpPrev').addEventListener('click',function(e){e.stopPropagation();cmpAnterior();cmpReiniciarAutoplay();});
+document.getElementById('cmpStage').addEventListener('click',function(e){if(e.target.closest('.car-nav'))return;cmpSiguiente();cmpReiniciarAutoplay();});
+document.getElementById('cmpSideLeft').addEventListener('click',function(){cmpAnterior();cmpReiniciarAutoplay();});
+document.getElementById('cmpSideRight').addEventListener('click',function(){cmpSiguiente();cmpReiniciarAutoplay();});
+cmpMostrarCarrusel();cmpReiniciarAutoplay();
 </script>
 </body></html>
